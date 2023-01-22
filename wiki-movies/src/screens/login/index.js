@@ -1,9 +1,9 @@
 import React from 'react'
-import LoginPage from '../../Components/LoginPage'
+import SignUp from '../../Components/SignUp'
 
 const login = () => {
   return (
-   <LoginPage/>
+   <SignUp heading='login' subHeading='Please enter your login and password!'/>
   )
 }
 

@@ -14,14 +14,18 @@ const Home = loadable(() => import('../screens/home'), {
     fallback: <Loader/>
 });
 
+const Register = loadable(() => import('../screens/register/index.js'),{
+    fallback: <Loader/>
+});
+
 function AllRoutes() {
     return (
         <>
         <BrowserRouter>
             <Routes >
-            <Route path='/' element = {<Home/>} >
-            <Route path='/login' element={<Login/>} />
-            </Route>
+            <Route path='/' element = {<Home/>} />
+                <Route path='/login' element={<Login/>} />
+                <Route path='/register' element={<Register/>} />
 
 
             <Route path='*' element={<NotFound/>} />
